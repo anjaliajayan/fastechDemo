@@ -1,67 +1,68 @@
 <section>
-    <div class="container">
-      <form>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-8 col-xl-6">
-            <div class="row">
-              <h1 class="heading">digg</h1>
-            </div>
-            <label>Progress</label>
-            <div class="progress progress_style">
-              <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0"
-                aria-valuemax="100"></div>
-            </div>
-            <div class="row">
-              <p class="text-h3 q_head">
-                Complete - Review your application</p>
-  
-            </div>
-    
+  <div class="container">
+    <form>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+          <div class="row">
+            <h1 class="heading">digg</h1>
+          </div>
+          <label>Progress</label>
+          <div class="progress progress_style">
+            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0"
+              aria-valuemax="100"></div>
+          </div>
+          <div class="row">
+            <p class="text-h3 q_head">
+              Complete - Review your application</p>
+
+          </div>
+
           <div class="basic-details">
-            <h5 class="basic-head">Basic Informations <span (click)="editBasicInformations(basicDetails)">  <i class="fa fa-edit"></i></span></h5>
+            <h5 class="basic-head">Basic Informations <span (click)="editBasicInformations(basicDetails)"> <i
+                  class="fa fa-edit"></i></span></h5>
             <div class="row row-cols-2">
-                <div class="col">Name :</div>
-                <div class="col">{{basicDetails?.firstName}} {{basicDetails?.lastName}}</div>
-                <div class="col">Date of Birth:</div>
-                <div class="col">{{basicDetails?.dob}}</div>
-                <div class="col">Gender:</div>
-                <div class="col">{{gender}}</div>
-                <div class="col">Nationality:</div>
-                <div class="col"><span *ngIf="basicDetails?.nationality !=='Nationality'"></span>
-                    {{basicDetails?.nationality}}</div>
-                <div class="col">Country of Residence:</div>
-                <div class="col">{{basicDetails?.resideCountry}}</div>
-                <div class="col">Contact Number:</div>
-                <div class="col">{{basicDetails?.contact}}</div>
-                <div class="col">Email:</div>
-                <div class="col">{{basicDetails?.emailId}}</div>
-              </div>
+              <div class="col">Name :</div>
+              <div class="col">{{basicDetails?.firstName}} {{basicDetails?.lastName}}</div>
+              <div class="col">Date of Birth:</div>
+              <div class="col">{{basicDetails?.dob}}</div>
+              <div class="col">Gender:</div>
+              <div class="col">{{gender}}</div>
+              <div class="col">Nationality:</div>
+              <div class="col"><span *ngIf="basicDetails?.nationality !=='Nationality'"></span>
+                {{basicDetails?.nationality}}</div>
+              <div class="col">Country of Residence:</div>
+              <div class="col">{{basicDetails?.resideCountry}}</div>
+              <div class="col">Contact Number:</div>
+              <div class="col">{{basicDetails?.contact}}</div>
+              <div class="col">Email:</div>
+              <div class="col">{{basicDetails?.emailId}}</div>
+            </div>
           </div>
           <div class="basic-details">
-            <h5 class="basic-head">Questionnair <span>  <i class="fa fa-edit"></i></span></h5>
+            <h5 class="basic-head">Questionnair <span> <i class="fa fa-edit"></i></span></h5>
             <div>
-                <div class="col mt-4">Have you ever visited Dubai?<span>  <i class="fa fa-edit"></i></span></div>
-            
-                <div class="col">Do you have any friends or family in
-                    Dubai?<span>  <i class="fa fa-edit"></i></span></div>
-              
-                <div class="col">How long do you want to stay in stay
-                    in Dubai?<span>  <i class="fa fa-edit"></i></span></div>
-                
-                <div class="col">Why do you want to come to Dubai?<span>  <i class="fa fa-edit"></i></span></div>
-              
-              </div>
+              <div class="col mt-4">Have you ever visited Dubai?<span> <i class="fa fa-edit"></i></span></div>
+
+              <div class="col">Do you have any friends or family in
+                Dubai?<span> <i class="fa fa-edit"></i></span></div>
+
+              <div class="col">How long do you want to stay in stay
+                in Dubai?<span> <i class="fa fa-edit"></i></span></div>
+
+              <div class="col">Why do you want to come to Dubai?<span> <i class="fa fa-edit"></i></span></div>
+
+            </div>
           </div>
-  
-            <div class="row justify-content-start mt-4">
-              <div class="col">
-                <button class="btn mt-4 btn-customise"  (click)="completeApplication()">
-                    <span class="apply">Complete the Application</span>
-                    </button>
-              </div>
+
+          <div class="row justify-content-start mt-4">
+            <div class="col">
+              <button class="btn mt-4 btn-customise" (click)="completeApplication()">
+                <span class="apply">Complete the Application</span>
+              </button>
             </div>
           </div>
         </div>
-      </form>
-    </div>
-  </section>
+      </div>
+    </form>
+  </div>
+</section>

@@ -63,7 +63,7 @@
               <select class="custom-select form-control" id="inputGroupSelect04" formControlName="nationality">
                 <option selected>Nationality</option>
                 <option *ngFor="let nationality of nationalities">{{nationality}}</option>
-               
+
               </select>
             </div>
           </div>
@@ -72,7 +72,7 @@
               <select class="custom-select form-control" id="inputGroupSelect04" formControlName="resideCountry">
                 <option selected>Country of Residence</option>
                 <option *ngFor="let country of countries">{{country}}</option>
-              
+
               </select>
             </div>
           </div>
@@ -83,7 +83,8 @@
           </div>
           <div class="row align-items-center mt-4">
             <div class="col">
-              <input type="number" class="form-control customise"formControlName="contact" placeholder="Contact Number">
+              <input type="number" class="form-control customise" formControlName="contact"
+                placeholder="Contact Number">
             </div>
           </div>
 
@@ -96,10 +97,10 @@
 
           <div class="row justify-content-start mt-4">
             <div class="col">
-            
+
               <button class="btn mt-4 btn-customise" [disabled]="!personalDetailForm.valid" (click)="applyNow()">
                 <span class="apply">Apply Now</span></button>
-             </div>
+            </div>
           </div>
         </div>
       </div>

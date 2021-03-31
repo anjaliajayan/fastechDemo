@@ -9,18 +9,18 @@ import { getpersonalDetailsObjState } from 'src/core/reducers';
   styleUrls: ['./questionair-four.component.css']
 })
 export class QuestionairFourComponent implements OnInit {
- interests=["Outdoors","Fitness","Health","Travels","Sports" ,"Theme Park","Cooking"]
-  constructor(private router:Router,private store: Store<{details:any}>) { }
+  interests = ["Outdoors", "Fitness", "Health", "Travels", "Sports", "Theme Park", "Cooking"]
+  constructor(private router: Router, private store: Store<{ details: any }>) { }
 
   ngOnInit(): void {
     let data: any = select(getpersonalDetailsObjState);
     this.store.pipe(data).subscribe(async (data: any) => {
-      console.log("@@@@@@@@@@@@",data);
-      
+
+
     });
   }
-  callfiveQuestionair(){
+  callfiveQuestionair() {
     this.router.navigateByUrl("/questionair-complete")
-    
+
   }
 }

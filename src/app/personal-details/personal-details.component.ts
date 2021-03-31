@@ -13,8 +13,8 @@ import { getpersonalDetailsObjState } from 'src/core/reducers';
   styleUrls: ['./personal-details.component.css']
 })
 export class PersonalDetailsComponent implements OnInit {
-  personalDetailForm:FormGroup;
-  countries=[
+  personalDetailForm: FormGroup;
+  countries = [
     "United States",
     "Canada",
     "Afghanistan",
@@ -31,33 +31,33 @@ export class PersonalDetailsComponent implements OnInit {
     "Aruba",
     "Australia"]
 
-    nationalities=["Algerian",     
-    "Algerian"   ,
-    "American"   ,
-    "Andorran"   ,
-    "Angolan"    ,
-    "Antiguans"  ,
+  nationalities = ["Algerian",
+    "Algerian",
+    "American",
+    "Andorran",
+    "Angolan",
+    "Antiguans",
     "Argentinean",
-    "Armenian"   ,
-    "Australian" ,
-    "Austrian"   ,
+    "Armenian",
+    "Australian",
+    "Austrian",
     "Azerbaija",
-    "Bahamian"   ,
-    "Bahraini"   ,
+    "Bahamian",
+    "Bahraini",
     "Bangladeshi",
-    "Barbadian"  ,
-    "Barbudans"  ,
-    "Batswana"   ,
+    "Barbadian",
+    "Barbudans",
+    "Batswana",
     "Indian",
     "Emirian"
-        
-    ]
+
+  ]
   basicDetails: any;
-  
-  constructor(private store: Store<{details:any}>,
-    private fb:FormBuilder,private router:Router,private activateRoute:ActivatedRoute){
+
+  constructor(private store: Store<{ details: any }>,
+    private fb: FormBuilder, private router: Router, private activateRoute: ActivatedRoute) {
     // store.pipe(select(personalObj));
-   }
+  }
 
   ngOnInit(): void {
     this.inItForm();
@@ -66,50 +66,50 @@ export class PersonalDetailsComponent implements OnInit {
     });
     let data: any = select(getpersonalDetailsObjState);
     this.store.pipe(data).subscribe(async (data: any) => {
-      this.basicDetails=data;
-      
+      this.basicDetails = data;
+
     });
-    
-    if(this.activateRoute.snapshot.params.id === "1"){
-       this.editDetails();
+
+    if (this.activateRoute.snapshot.params.id === "1") {
+      this.editDetails();
     }
-    
+
   }
-  inItForm(){
-   this.personalDetailForm= this.fb.group({
-     firstName:['',Validators.pattern('^[a-zA-Z ]+$')],
-     lastName:['',Validators.pattern('^[a-zA-Z ]+$')],
-     dob:[''],
-     userName:['',[Validators.required,Validators.pattern('^[a-zA-Z0-9]+$')]],
-     gender:[''],
-     nationality:['Nationality'],
-     resideCountry:['Country of Residence'],
-     contact:[''],
-     emailId:['',Validators.pattern('^[A-Za-z0-9._&%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,9}$')],
-     male:[''],
-     female:[''],
-     other:['']
-   }) 
+  inItForm() {
+    this.personalDetailForm = this.fb.group({
+      firstName: ['', Validators.pattern('^[a-zA-Z ]+$')],
+      lastName: ['', Validators.pattern('^[a-zA-Z ]+$')],
+      dob: [''],
+      userName: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9]+$')]],
+      gender: [''],
+      nationality: ['Nationality'],
+      resideCountry: ['Country of Residence'],
+      contact: [''],
+      emailId: ['', Validators.pattern('^[A-Za-z0-9._&%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,9}$')],
+      male: [''],
+      female: [''],
+      other: ['']
+    })
   }
   get gfc() { return this.personalDetailForm.controls };
 
-  applyNow(){
+  applyNow() {
     this.router.navigateByUrl("/questionair-first")
   }
-  editDetails(){
+  editDetails() {
     this.personalDetailForm.patchValue({
-      firstName:this.basicDetails?.firstName,
-      lastName:this.basicDetails?.lastName,
-      dob:this.basicDetails?.dob,
-      userName:this.basicDetails?.userName,
-      gender:[''],
-      nationality:this.basicDetails?.nationality,
-      resideCountry:this.basicDetails?.resideCountry,
-      contact:this.basicDetails?.contact,
-      emailId:this.basicDetails?.emailId,
-      male:this.basicDetails?.male,
-      female:this.basicDetails?.female,
-      other:this.basicDetails?.other
+      firstName: this.basicDetails?.firstName,
+      lastName: this.basicDetails?.lastName,
+      dob: this.basicDetails?.dob,
+      userName: this.basicDetails?.userName,
+      gender: [''],
+      nationality: this.basicDetails?.nationality,
+      resideCountry: this.basicDetails?.resideCountry,
+      contact: this.basicDetails?.contact,
+      emailId: this.basicDetails?.emailId,
+      male: this.basicDetails?.male,
+      female: this.basicDetails?.female,
+      other: this.basicDetails?.other
     })
   }
 }

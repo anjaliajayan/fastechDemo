@@ -8,18 +8,18 @@ import { Router } from '@angular/router';
 })
 export class QuestionairFirstComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    
+
 
 
   }
-  goBackToPersonal(){
+  goBackToPersonal() {
     this.router.navigateByUrl("/personal")
-    
+
   }
-  callSecondQuestionair(){
+  callSecondQuestionair() {
     this.router.navigateByUrl("/questionair-second")
   }
 }
