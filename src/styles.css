@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+body {
+  background-image:url(./assets/images/pure-white.png);
+  background-repeat: no-repeat;
+  min-height: 679px;
+  background-size: cover;
+}
+h1{
+font-family:'Gill Sans MT';
+font-size: 42px;
+font-weight:bold ;
+}
+.notValid{
+  color: red;
+}
+.q_head{
+  font-family:Calibri;
+  font-size: 22px;
+}
+.form-control {
+  background-color: #93b0ca36 !important;
+}
+.gender-position{
+  padding-left: 19px;
+}

@@ -1,0 +1,17 @@
+.progress{
+    height: 8px;
+    color: #4f20e5f2;
+
+}
+.progress-bar{
+    background-color: #183ee2;
+}
+.btn-style{
+  background-color: #8080807d; 
+  margin: 20px;
+  border-radius: 20px; 
+}
+.btn-customise{
+    background-color: #1a2ee5eb;
+    border-radius: 20px;
+}

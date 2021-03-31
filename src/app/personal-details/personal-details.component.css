@@ -1,0 +1,20 @@
+.notValid{
+    color: red;
+}
+.q_head{
+    font-family:Calibri;
+    font-size: 22px;
+}
+.form-control {
+    background-color: #93b0ca36 !important;
+}
+.gender-position{
+    padding-left: 19px;
+}
+.btn-customise{
+    background-color: #1a2ee5eb;
+    border-radius: 20px;
+}
+.apply{
+    color: white;
+}

@@ -1,0 +1,108 @@
+<section>
+  <div class="container">
+    <form [formGroup]="personalDetailForm">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+          <div class="row">
+            <h1 class="heading">digg</h1>
+          </div>
+
+          <div class="row">
+            <p class="text-h3 q_head">
+              Apply now to work in Dubai?</p>
+
+          </div>
+          <div class="row align-items-center">
+            <div class="col mt-4">
+              <input type="text" class="form-control" formControlName="firstName" placeholder="First Name">
+              <small *ngIf="gfc.firstName.errors?.pattern" class="notValid">Please enter Valid Name</small>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col mt-4">
+              <input type="text" class="form-control customise" formControlName="lastName" placeholder="Last Name">
+              <small *ngIf="gfc.lastName.errors?.pattern" class="notValid">Please enter Valid Name</small>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col mt-4">
+              <input type="date" class="form-control customise" formControlName="dob" placeholder="Date Of Birth">
+            </div>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col mt-4">
+              <input type="text" class="form-control customise" formControlName="userName" placeholder="User name">
+
+              <small *ngIf="gfc.userName.errors?.pattern" class="notValid">Please enter Valid username</small>
+            </div>
+          </div>
+
+          <div class="row align-items-center gender-position">
+            <div class="col mt-4">
+              <input type="checkbox" formControlName="male" class="form-check-input">
+              <label>Male</label>
+
+            </div>
+            <div class="col mt-4">
+              <input type="checkbox" formControlName="female" class="form-check-input">
+              <label>Female</label>
+
+            </div>
+            <div class="col mt-4">
+              <input type="checkbox" formControlName="other" class="form-check-input">
+              <label>Other</label>
+
+            </div>
+          </div>
+
+
+
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <select class="custom-select form-control" id="inputGroupSelect04" formControlName="nationality">
+                <option selected>Nationality</option>
+                <option *ngFor="let nationality of nationalities">{{nationality}}</option>
+               
+              </select>
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <select class="custom-select form-control" id="inputGroupSelect04" formControlName="resideCountry">
+                <option selected>Country of Residence</option>
+                <option *ngFor="let country of countries">{{country}}</option>
+              
+              </select>
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <span>How we can contact you?</span>
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <input type="number" class="form-control customise"formControlName="contact" placeholder="Contact Number">
+            </div>
+          </div>
+
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <input type="email" class="form-control customise" formControlName="emailId" placeholder="Email">
+              <small *ngIf="gfc.emailId.errors?.pattern" class="notValid">Please enter Valid Email</small>
+            </div>
+          </div>
+
+          <div class="row justify-content-start mt-4">
+            <div class="col">
+            
+              <button class="btn mt-4 btn-customise" [disabled]="!personalDetailForm.valid" (click)="applyNow()">
+                <span class="apply">Apply Now</span></button>
+             </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

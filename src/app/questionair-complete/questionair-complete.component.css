@@ -1,0 +1,24 @@
+
+.basic-details {
+    height: fit-content;
+    padding: 30px;
+    background: #8080801f;
+}
+.basic-head{
+    color: indigo;
+}
+.btn-customise{
+    background-color: #1a2ee5eb;
+    border-radius: 20px;
+}
+.apply{
+    color: white;
+}
+.progress{
+    height: 8px;
+    color: #4f20e5f2;
+
+}
+.progress-bar{
+    background-color: #183ee2;
+}
